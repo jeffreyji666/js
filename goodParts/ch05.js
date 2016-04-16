@@ -28,8 +28,8 @@ Mammal.prototype.says = function() {
 
 var myMammal = new Mammal('Herb the Mammal');
 var name = myMammal.get_name();
-print(name);
-print('----------------------');
+console.log(name);
+console.log('----------------------');
 
 var Cat = function(name) {
 	this.name = name;
@@ -54,8 +54,8 @@ var myCat = new Cat('Henrietta');
 var says = myCat.says(); // meow
 var purr = myCat.purr(5);
 var name = myCat.get_name();
-print('says:' + says + ',purr:' + purr + ',name:' + name);
-print('----------------------');
+console.log('says:' + says + ',purr:' + purr + ',name:' + name);
+console.log('----------------------');
 
 Function.method('inherits', function(Parent) {
 	this.prototype = new Parent();
@@ -81,8 +81,8 @@ var myCat = new Cat('Henrietta');
 var says = myCat.says(); // meow
 var purr = myCat.purr(5);
 var name = myCat.get_name();
-print('says:' + says + ',purr:' + purr + ',name:' + name);
-print('----------------------');
+console.log('says:' + says + ',purr:' + purr + ',name:' + name);
+console.log('----------------------');
 
 Object.create = function(o) {
 	var F = function() {
@@ -117,9 +117,9 @@ myCat.purr = function(n) {
 myCat.get_name = function() {
 	return this.says() + ' ' + this.name + ' ' + this.says();
 };
-print('says:' + myCat.says() + ',purr:' + myCat.purr(4) + ',name:'
+console.log('says:' + myCat.says() + ',purr:' + myCat.purr(4) + ',name:'
 		+ myCat.get_name());
-print('----------------------');
+console.log('----------------------');
 
 var mammal = function(spec) {
 	var that = {};
@@ -137,7 +137,7 @@ var mammal = function(spec) {
 var myMammal = mammal({
 	name : 'Herb'
 });
-print(myMammal.get_name());
+console.log(myMammal.get_name());
 
 var cat = function(spec) {
 	spec.saying = spec.saying || 'meow';
@@ -160,8 +160,8 @@ var cat = function(spec) {
 var myCat = cat({
 	name : "Henrietta"
 });
-print('purr:' + myCat.purr(4) + ',name:' + myCat.get_name());
-print('----------------------');
+console.log('purr:' + myCat.purr(4) + ',name:' + myCat.get_name());
+console.log('----------------------');
 
 Object.method('superior', function(name) {
 	var that = this;
@@ -183,7 +183,7 @@ var myCoolCat = coolcat({
 	name : 'Bix'
 });
 var name = myCoolCat.get_name();
-print('name:' + name);
+console.log('name:' + name);
 
 var eventually = function(that) {
 	var registry = {};

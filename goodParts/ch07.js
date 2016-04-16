@@ -9,5 +9,5 @@ var names = [ 'url', 'scheme', 'slash', 'host', 'port', 'path', 'query', 'hash' 
 var blanks = '       ';
 
 for (var i = 0; i < names.length; i += 1) {
-	print(names[i] + ':' + blanks.substring(names[i].length), result[i]);
+	console.log(names[i] + ':' + blanks.substring(names[i].length), result[i]);
 }

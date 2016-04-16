@@ -27,15 +27,15 @@ var mult = function(a, b) {
 }
 
 var sum = data.reduce(add, 0);
-print(sum);
+console.log(sum);
 
 var product = data.reduce(mult, 1);
-print(product);
+console.log(product);
 
 data.total = function() {
 	return this.reduce(add, 0);
 }
-print(data.total());
+console.log(data.total());
 
 Array.dim = function(dimension, initial) {
 	var a = [], i;
@@ -46,7 +46,7 @@ Array.dim = function(dimension, initial) {
 };
 
 var myArray = Array.dim(10, 0);
-print(myArray);
+console.log(myArray);
 
 Array.matrix = function(m, n, initial) {
 	var a, i, j, mat = [];
@@ -62,7 +62,7 @@ Array.matrix = function(m, n, initial) {
 };
 
 var myMatrix = Array.matrix(4, 4, 2);
-print(myMatrix[3][3]);
+console.log(myMatrix[3][3]);
 
 Array.identity = function(n) {
 	var i, mat = Array.matrix(n, n, 0);
@@ -73,4 +73,4 @@ Array.identity = function(n) {
 };
 
 myMatrix = Array.identity(4);
-print(myMatrix[3][3]);
+console.log(myMatrix[3][3]);
